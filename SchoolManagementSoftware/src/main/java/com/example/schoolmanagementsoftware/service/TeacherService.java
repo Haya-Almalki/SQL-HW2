@@ -33,7 +33,7 @@ public class TeacherService {
     // and return one teacher (return bad request if teacher id is invalid
 
     public Teacher getTeacherById(Integer id){
-        Teacher teacher=teacherRepository.getById(id);
+        Teacher teacher=teacherRepository.findTeacherById(id);
         if (teacher==null) {
             throw new ApiException("Wrong Id");
         }
