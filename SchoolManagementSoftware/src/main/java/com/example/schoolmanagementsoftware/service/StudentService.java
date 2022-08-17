@@ -32,7 +32,7 @@ public class StudentService {
     //Create endpoint that takes student id
     // and return one student (return bad request if student id is invalid)
     public Student getStudentById(Integer id){
-        Student student=studentRepository.getReferenceById(id);
+        Student student=studentRepository.findStudentById(id);
         if(student==null){
             throw new ApiException("Invalid id!");
         }
